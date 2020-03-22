@@ -1,0 +1,19 @@
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(12, 11, 10, 9, 8, 7);//设置接口
+void setup()
+{
+  lcd.begin(16,2);
+  lcd.clear(); //清屏
+  delay(1000); //延时1000ms
+}
+
+void loop ()
+{	
+ 	
+
+     lcd.setCursor(0, 0) ;   //设置光标位置为第1行第1个位置
+     lcd.print("LCD-1602  "); //使屏幕显示文字
+     lcd.setCursor(0, 1) ;
+     lcd.print("LCD1602   "); //使屏幕显示文字Button OFF
+	delay(500);                     //延时0.1秒，这里也就是刷新速度。	
+}
